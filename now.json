@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server/server.js", 
+            "use": "@now/node-server" 
+        }
+    ],
+    "routes": [
+        {
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+            },
+            "src": "/.*", 
+            "dest": "index.js" 
+        }
+    ],
+    "env": {
+        "APIKEY": "AIzaSyA1DIpmyzwmKTtzSNu8rXQfZ7l_fLgC1XQ",
+        "AUTHDOMAIN": "cafe-node.firebaseapp.com",
+        "DATABASEURL": "https://cafe-node.firebaseio.com",
+        "PROJECTID": "cafe-node",
+        "STORAGEBUCKET": "cafe-node.appspot.com",
+        "MESSAGINGSENDERID": "190700585058",
+        "APPID": "1:190700585058:web:31009c50faa1d2a8e7513b"
+      }
+  }
